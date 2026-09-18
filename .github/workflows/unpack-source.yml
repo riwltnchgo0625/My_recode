@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'source_bundle.zip'
+      - '.bootstrap/part11'
 
 permissions:
   contents: write
@@ -14,21 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Expand sanitized source
+      - name: Expand and clean sanitized source
         shell: bash
         run: |
-          if [ ! -f source_bundle.zip ]; then
-            echo 'Bundle already removed; nothing to do.'
-            exit 0
-          fi
-          unzip -oq source_bundle.zip -d .
+          set -euo pipefail
+          for i in $(seq -w 0 11); do
+            test -f ".bootstrap/part${i}"
+          done
+          cat .bootstrap/part{00..11} > /tmp/myrecord-source.b64
+          base64 -d /tmp/myrecord-source.b64 > /tmp/myrecord-source.zip
+          echo '7659015c8d1be7e74649fb04a74a7306b32286ca74ab103f906af9e39c24947d  /tmp/myrecord-source.zip' | sha256sum -c -
+          unzip -oq /tmp/myrecord-source.zip -d .
+          rm -rf .bootstrap
           rm -f source_bundle.zip
+          rm -f .github/workflows/unpack-source.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          if git diff --cached --quiet; then
-            echo 'No changes to commit.'
-            exit 0
-          fi
           git commit -m 'Add sanitized MyRecord v1.8.1 source'
           git push
