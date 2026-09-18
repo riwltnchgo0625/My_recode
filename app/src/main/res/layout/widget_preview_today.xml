@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/widget_background" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="오늘 기록     8월 31일" android:textColor="#F4F5F7" android:textSize="17sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:text="1 / 3 완료" android:textColor="#F4F5F7" android:textSize="13sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="32dp" android:gravity="center_vertical"
+        android:text="☐ 할 일 · 다이소 가기" android:textColor="#F4F5F7" android:textSize="13sp" />
+    <TextView android:layout_width="match_parent" android:layout_height="32dp" android:gravity="center_vertical"
+        android:text="☐ 할 일 · 택배 보내기" android:textColor="#F4F5F7" android:textSize="13sp" />
+    <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="bottom|end"
+        android:text="● ○ ○ ○ ○ ○ ○" android:textColor="#9DA3AD" android:textSize="10sp" />
+</LinearLayout>

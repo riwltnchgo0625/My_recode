@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">나의 기록</string>
+    <string name="widget_name">오늘 기록</string>
+    <string name="widget_today_description">오늘 체크리스트를 확인하고 체크합니다.</string>
+    <string name="widget_routine_description">오늘 예정된 반복 루틴을 확인하고 체크합니다.</string>
+    <string name="widget_month_description">이번 달 목표를 확인하고 체크합니다.</string>
+    <string name="widget_year_description">올해 목표를 확인하고 체크합니다.</string>
+    <string name="widget_notes_description">최근 수정한 메모를 확인하고 바로 엽니다.</string>
+    <string name="widget_dashboard_description">오늘·루틴·한 달·1년 목표 달성률을 한눈에 확인합니다.</string>
+    <string name="widget_calendar_description">날짜별 달성률과 당일 메모 여부를 달력에서 확인합니다.</string>
+</resources>

@@ -1,0 +1,26 @@
+# Build output
+/build/
+/dist/
+*.apk
+*.aab
+
+# Signing / secrets
+/signing/
+*.jks
+*.keystore
+*.p12
+*.pem
+local.properties
+
+# User data / exports / photos
+my_record_data*.json
+user-data/
+exports/
+photos/
+*.backup
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

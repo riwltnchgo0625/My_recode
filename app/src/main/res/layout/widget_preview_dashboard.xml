@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="달성 대시보드     8월 31일"
+        android:textColor="#F4F5F7"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="68% 달성 · 13 / 19"
+        android:textColor="#F4F5F7"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="▥ 오늘 체크 · 75% · 3/4"
+        android:textColor="#F4F5F7"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="▥ 반복 루틴 · 50% · 2/4"
+        android:textColor="#F4F5F7"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="▥ 한 달 목표 · 60% · 3/5"
+        android:textColor="#F4F5F7"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="▥ 1년 목표 · 67% · 4/6"
+        android:textColor="#F4F5F7"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|end"
+        android:text="○ ○ ○ ○ ○ ● ○"
+        android:textColor="#9DA3AD"
+        android:textSize="10sp" />
+</LinearLayout>

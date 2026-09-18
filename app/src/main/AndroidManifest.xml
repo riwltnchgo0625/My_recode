@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myrecord.app"
+    android:versionCode="11"
+    android:versionName="1.8.1">
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:name=".NoteEditorActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+
+        <activity
+            android:name=".ItemDetailActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".TodayWidgetProvider"
+            android:exported="false"
+            android:label="오늘 기록">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/today_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".MonthWidgetProvider"
+            android:exported="false"
+            android:label="이번 달 목표">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/month_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".RoutineWidgetProvider"
+            android:exported="false"
+            android:label="반복 루틴">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/routine_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".YearWidgetProvider"
+            android:exported="false"
+            android:label="올해 목표">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/year_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".NotesWidgetProvider"
+            android:exported="false"
+            android:label="최근 메모">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/notes_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".DashboardWidgetProvider"
+            android:exported="false"
+            android:label="달성 대시보드">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dashboard_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".CalendarWidgetProvider"
+            android:exported="false"
+            android:label="달력">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/calendar_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>
